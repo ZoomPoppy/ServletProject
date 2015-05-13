@@ -21,8 +21,13 @@ public class BeerSelect extends HttpServlet  {
         PrintWriter out = response.getWriter();
         out.println("Beer Selection Advice<br>");*/
         String c = request.getParameter("color");
+     //   String[] a = request.getParameterValues("sizes");
+     //   String b = request.getParameter("body");
         //out.println("<br>Got beer color"+c);
         List result = beerExpert.getBrands(c);
+        response.setHeader("foo","bar");
+        response.addHeader("foo","bar");
+        response.setIntHeader("foo",42);
         request.setAttribute("styles",result);
         RequestDispatcher view = request.getRequestDispatcher("result.jsp");
         view.forward(request,response);
