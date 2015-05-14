@@ -18,4 +18,21 @@
         <url-pattern>/Beer/SelectBeer.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>BeerParamTests</servlet-name>
+        <servlet-class>com.zz.web.InitParams</servlet-class>
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>zoompoppy@outlook.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>mainEmail</param-name>
+            <param-value>adsfads@zz.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BeerParamTests</servlet-name>
+        <url-pattern>/Tester.do</url-pattern>
+    </servlet-mapping>
+
 </web-app>

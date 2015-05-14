@@ -16,20 +16,22 @@ import java.util.List;
 public class BeerSelect extends HttpServlet  {
     public void doPost(HttpServletRequest request,HttpServletResponse response)
     throws IOException,ServletException{
-       BeerExpert beerExpert = new BeerExpert();
-        /* response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("Beer Selection Advice<br>");*/
+         BeerExpert beerExpert = new BeerExpert();
+//        PrintWriter out = response.getWriter();
+//        out.println("Beer Selection Advice<br>");
+//        out.println("<br>Got beer color"+c);
+        response.setContentType("text/html");
         String c = request.getParameter("color");
-     //   String[] a = request.getParameterValues("sizes");
-     //   String b = request.getParameter("body");
-        //out.println("<br>Got beer color"+c);
+        String[] a = request.getParameterValues("sizes");
+        String b = request.getParameter("body");
         List result = beerExpert.getBrands(c);
-        response.setHeader("foo","bar");
+/*        response.setHeader("foo","bar");
         response.addHeader("foo","bar");
-        response.setIntHeader("foo",42);
+        response.setIntHeader("foo",42);//增加首部，并设置*/
         request.setAttribute("styles",result);
         RequestDispatcher view = request.getRequestDispatcher("result.jsp");
         view.forward(request,response);
+       // response.sendRedirect("https://www.baidu.com/");//重定向
+
     }
 }
