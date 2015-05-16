@@ -21,17 +21,24 @@ public class SessionTest extends HttpServlet {
         //URL重写
         Integer count = new Integer(0);
         HttpSession session = req.getSession();
-        if (session.isNew()){
+        session.setMaxInactiveInterval(50);//session存活时间50ｓ；
+        if (session==null){
             session = req.getSession();
             session.setAttribute("key",count);
         }
         else{
             count = (Integer)session.getAttribute("key");
-            count = count+1;
+            if (count!=null){
+                count = count+1;
+            }
+            else {
+                count = 0;
+            }
+
         }
         session.setAttribute("key",count);
         out.println("<html><body>");
-        out.println("<a href=\"" + resp.encodeURL("?key="+count)+ "\">Click Me </a>");
+        out.println("<a href=\"" + resp.encodeURL("?key="+count)+ "\">Click Me </a>"+count);
         out.println("</body></html");
     }
 }
