@@ -16,13 +16,22 @@ public class SessionTest extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
-        out.println("test session attributes<br>");
+//        out.println("test session attributes<br>");
+//        HttpSession session = req.getSession(false);
+        //URL÷ÿ–¥
+        Integer count = new Integer(0);
         HttpSession session = req.getSession();
         if (session.isNew()){
-            out.println("This is a new session");
+            session = req.getSession();
+            session.setAttribute("key",count);
         }
         else{
-            out.println("welcome back1!");
+            count = (Integer)session.getAttribute("key");
+            count = count+1;
         }
+        session.setAttribute("key",count);
+        out.println("<html><body>");
+        out.println("<a href=\"" + resp.encodeURL("?key="+count)+ "\">Click Me </a>");
+        out.println("</body></html");
     }
 }
