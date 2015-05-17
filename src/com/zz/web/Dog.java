@@ -8,6 +8,8 @@ public class Dog {
     public Dog(String breed){
         this.breed = breed;
     }
-
+    public String getBreed(){
+        return breed;
+    }
 
 }

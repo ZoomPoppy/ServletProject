@@ -7,99 +7,107 @@
 
 
 
-    <!--<servlet>-->
-        <!--<servlet-name>Ch3 Beer</servlet-name>-->
-        <!--<servlet-class>com.zz.web.BeerSelect</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>Ch3 Beer</servlet-name>-->
-        <!--<url-pattern>/SelectBeer.do</url-pattern>-->
-    <!--</servlet-mapping>-->
+    <servlet>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <servlet-class>com.zz.web.BeerSelect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <url-pattern>/SelectBeer.do</url-pattern>
+    </servlet-mapping>
 
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>Ch3 Beer</servlet-name>-->
-        <!--<url-pattern>/Beer/SelectBeer.do</url-pattern>-->
-    <!--</servlet-mapping>-->
+    <servlet-mapping>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <url-pattern>/Beer/SelectBeer.do</url-pattern>
+    </servlet-mapping>
 
-    <!--<servlet>-->
-        <!--<servlet-name>BeerParamTests</servlet-name>-->
-        <!--<servlet-class>com.zz.web.InitParams</servlet-class>-->
-        <!--&lt;!&ndash;<init-param>&ndash;&gt;-->
-            <!--&lt;!&ndash;<param-name>adminEmail</param-name>&ndash;&gt;-->
-            <!--&lt;!&ndash;<param-value>zoompoppy@outlook.com</param-value>&ndash;&gt;-->
-        <!--&lt;!&ndash;</init-param>&ndash;&gt;-->
-        <!--&lt;!&ndash;<init-param>&ndash;&gt;-->
-            <!--&lt;!&ndash;<param-name>mainEmail</param-name>&ndash;&gt;-->
-            <!--&lt;!&ndash;<param-value>adsfads@zz.com</param-value>&ndash;&gt;-->
-        <!--&lt;!&ndash;</init-param>&ndash;&gt;-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>BeerParamTests</servlet-name>-->
-        <!--<url-pattern>/Tester.do</url-pattern>-->
-    <!--</servlet-mapping>-->
-    <!--&lt;!&ndash;&lt;!&ndash;//上下文初始化参数&ndash;&gt;&ndash;&gt;-->
-    <!--&lt;!&ndash;<context-param>&ndash;&gt;-->
-        <!--&lt;!&ndash;<param-name>adminEmail</param-name>&ndash;&gt;-->
-        <!--&lt;!&ndash;<param-value>zoompoppy@outlook.com</param-value>&ndash;&gt;-->
-    <!--&lt;!&ndash;</context-param>&ndash;&gt;-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>ListenerTester</servlet-name>-->
-        <!--<url-pattern>/contextListener</url-pattern>-->
-    <!--</servlet-mapping>-->
-    <!--<servlet>-->
-        <!--<servlet-name>ListenerTester</servlet-name>-->
-      <!--<servlet-class>com.zz.web.ListenerTest</servlet-class>-->
-    <!--</servlet>-->
-    <!--&lt;!&ndash;<context-param>&ndash;&gt;-->
-        <!--&lt;!&ndash;<param-name>breed</param-name>&ndash;&gt;-->
-        <!--&lt;!&ndash;<param-value>Great Dean</param-value>&ndash;&gt;-->
-    <!--&lt;!&ndash;</context-param>&ndash;&gt;-->
+    <servlet>
+        <servlet-name>BeerParamTests</servlet-name>
+        <servlet-class>com.zz.web.InitParams</servlet-class>
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>zoompoppy@outlook.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>mainEmail</param-name>
+            <param-value>adsfads@zz.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BeerParamTests</servlet-name>
+        <url-pattern>/Tester.do</url-pattern>
+    </servlet-mapping>
+    <!--&lt;!&ndash;//上下文初始化参数&ndash;&gt;-->
+    <context-param>
+        <param-name>adminEmail</param-name>
+        <param-value>zoompoppy@outlook.com</param-value>
+    </context-param>
+    <servlet-mapping>
+        <servlet-name>ListenerTester</servlet-name>
+        <url-pattern>/contextListener</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ListenerTester</servlet-name>
+      <servlet-class>com.zz.web.ListenerTest</servlet-class>
+    </servlet>
+    <context-param>
+        <param-name>breed</param-name>
+        <param-value>Great Dean</param-value>
+    </context-param>
 
-    <!--<listener>-->
-        <!--<listener-class>com.zz.web.MyServletContextListener</listener-class>-->
-    <!--</listener>-->
+    <listener>
+        <listener-class>com.zz.web.MyServletContextListener</listener-class>
+    </listener>
 
-    <!--&lt;!&ndash;请求分配&ndash;&gt;-->
-    <!--<servlet>-->
-        <!--<servlet-name>ResDispathcer</servlet-name>-->
-        <!--<servlet-class>com.zz.web.ReqDispatcher</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>ResDispathcer</servlet-name>-->
-        <!--<url-pattern>/aaa</url-pattern>-->
-    <!--</servlet-mapping>-->
-    <!--&lt;!&ndash;<context-param>&ndash;&gt;-->
-        <!--&lt;!&ndash;<param-name>baidu</param-name>&ndash;&gt;-->
-        <!--&lt;!&ndash;<param-value>/a</param-value>&ndash;&gt;-->
-    <!--&lt;!&ndash;</context-param>&ndash;&gt;-->
-    <!--&lt;!&ndash;会话&ndash;&gt;-->
-    <!--<servlet>-->
-        <!--<servlet-name>Session</servlet-name>-->
-        <!--<servlet-class>com.zz.web.SessionTest</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>Session</servlet-name>-->
-        <!--<url-pattern>/session</url-pattern>-->
-    <!--</servlet-mapping>-->
+    <!--请求分配-->
+    <servlet>
+        <servlet-name>ResDispathcer</servlet-name>
+        <servlet-class>com.zz.web.ReqDispatcher</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResDispathcer</servlet-name>
+        <url-pattern>/aaa</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>baidu</param-name>
+        <param-value>/a</param-value>
+    </context-param>
+    <!--会话-->
+    <servlet>
+        <servlet-name>Session</servlet-name>
+        <servlet-class>com.zz.web.SessionTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Session</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
 
-    <!--&lt;!&ndash;cookie&ndash;&gt;-->
-    <!--<servlet>-->
-        <!--<servlet-name>cookietest</servlet-name>-->
-        <!--<servlet-class>com.zz.web.CookieTest</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>cookietest</servlet-name>-->
-        <!--<url-pattern>cookie</url-pattern>-->
-    <!--</servlet-mapping>-->
+    <!--cookie-->
+    <servlet>
+        <servlet-name>cookietest</servlet-name>
+        <servlet-class>com.zz.web.CookieTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cookietest</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
 
-    <!--&lt;!&ndash;监听者&ndash;&gt;-->
     <listener>
     <listener-class>com.zz.web.BeerAttributeListener</listener-class>
     </listener>
     <listener>
     <listener-class>com.zz.web.BeerSessionCounter</listener-class>
     </listener>
-    <listener>
-    <listener-class>com.zz.web.Dog</listener-class>
-    </listener>
+    <!--<listener>-->
+    <!--<listener-class>com.zz.web.Dog</listener-class>-->
+    <!--</listener>-->
+
+    <servlet>
+        <servlet-name>hobby</servlet-name>
+        <servlet-class>com.zz.web.Hobby</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hobby</servlet-name>
+        <url-pattern>/HobbyPage.do</url-pattern>
+    </servlet-mapping>
 </web-app>
