@@ -8,7 +8,6 @@ import javax.servlet.http.HttpSessionBindingEvent;
  */
 public class BeerAttributeListener implements HttpSessionAttributeListener {
 
-
     @Override
     public void attributeAdded(HttpSessionBindingEvent httpSessionBindingEvent) {
         String name = httpSessionBindingEvent.getName();
