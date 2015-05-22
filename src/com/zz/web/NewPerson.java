@@ -1,9 +1,9 @@
 package com.zz.web;
 
 /**
- * Created by zz on 2015/5/19.
+ * Created by zz on 2015/5/20.
  */
-public abstract class Person  {
+public class NewPerson {
     private String name;
     private Dog dog;
     public Dog getDog(){return dog;}

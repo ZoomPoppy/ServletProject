@@ -110,4 +110,13 @@
         <servlet-name>hobby</servlet-name>
         <url-pattern>/HobbyPage.do</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>personwithdog</servlet-name>
+        <servlet-class>com.zz.web.beanTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>personwithdog</servlet-name>
+        <url-pattern>/javaBean.do</url-pattern>
+    </servlet-mapping>
 </web-app>
