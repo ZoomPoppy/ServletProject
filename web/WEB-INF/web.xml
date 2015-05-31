@@ -129,4 +129,18 @@
         <error-code>404</error-code>
         <location>/errorPage.jsp</location>
     </error-page>
+    <!--声明过滤器-->
+    <filter>
+        <filter-name>BeerReauset</filter-name>
+        <filter-class>com.zz.web.BeerRequestFilter</filter-class>
+        <init-param>
+            <param-name>LogFileName</param-name>
+            <param-value>UserLog.txt</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>BeerReauset</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+
 </web-app>
